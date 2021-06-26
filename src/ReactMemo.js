@@ -1,4 +1,5 @@
 import React from "react";
+import FunctionAsProp from "./react-memo/FunctionAsProp";
 import Input from "./react-memo/Input";
 import ObjectRef from "./react-memo/ObjectRef";
 
@@ -9,6 +10,9 @@ const ReactMemo = () => {
     label: "Name",
     value: "Santhosh"
   };
+  const callBackFunc = React.useCallback(() => {
+    console.log("callback clicked");
+  }, []);
   return (
     <>
       <h1>React.memo</h1>
@@ -17,6 +21,9 @@ const ReactMemo = () => {
       <br />
       <br />
       <ObjectRef info={objectA} />
+      <br />
+      <br />
+      <FunctionAsProp callBackFunc={callBackFunc} />
     </>
   );
 };
