@@ -10,6 +10,7 @@ const ReactMemo = () => {
     label: "Name",
     value: "Santhosh"
   };
+
   const callBackFunc = React.useCallback(() => {
     console.log("callback clicked");
   }, []);
